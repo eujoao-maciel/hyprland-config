@@ -348,7 +348,7 @@ bind = $mainMod, Q, killactive,
 # windowrule = float,class:^(kitty)$,title:^(kitty)$
 
 # Ignore maximize requests from apps. You'll probably like this.
-     windowrule = suppressevent maximize, class:.*
-
+     windowrule = match:class .*, suppress_event maximize
 # Fix some dragging issues with XWayland
+     windowrule = match:class ^$, match:title ^$, match:xwayland true, match:float true, match:fullscreen false, match:pin false, no_focus on
  
